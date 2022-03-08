@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Toolbar, AppBar, IconButton, Avatar } from '@mui/material';
+import { Box, Typography, Grid, Toolbar, AppBar, IconButton } from '@mui/material';
 import Calender from './Calender';
 import SelectLeague from './SelectLeague';
 import { Link } from 'react-router-dom';
@@ -46,10 +46,10 @@ const TopBar = ({
 								className={classes.title}
 								sx={{ display: 'flex', margin: 'auto', width: '200%' }}>
 								Gloria
-								<Avatar
+								<img
 									src={logo}
 									alt="logo"
-									sx={{
+									style={{
 										height: '4rem',
 										width: 'auto',
 										filter: 'invert(90%)',
