@@ -20,7 +20,7 @@ const LeftBar = ({ league }) => {
 				<TableContainer
 					className={classes.container}
 					component={Paper}
-					sx={{ width: '98%', margin: 'auto', borderRadius: 1 }}>
+					sx={{ width: '98%', margin: 'auto', mb: 1, borderRadius: 1 }}>
 					<Table sx={{ width: '100%' }} size="small">
 						<TableHead>
 							{/* Header */}
