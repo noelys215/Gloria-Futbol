@@ -49,11 +49,12 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 					<motion.div {...boxAnimation} transition={{ delay: i * 0.2 }}>
 						<Link to="/details/lineups" style={{ textDecoration: 'none' }}>
 							<Paper
-								className={classes.paper}
+								className={classes.container}
 								elevation={1}
 								sx={{
 									display: 'flex',
 									borderRadius: 2,
+									mb: 2,
 								}}
 								onClick={() => {
 									setFixtureId(fixture[i]?.fixture?.id);
@@ -62,12 +63,11 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 								<Table>
 									<TableBody
 										className={classes.item}
-										sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
+										sx={{ display: 'flex', flexDirection: 'column' }}>
 										{/* Home */}
 										<TableRow sx={{ height: '50px' }}>
 											{/* Badge/Logo */}
 											<TableCell
-												className={classes.teamText}
 												style={{ fontSize: '1.45rem', border: 'none' }}
 												align="center">
 												<img
@@ -105,7 +105,6 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 										<TableRow>
 											{/* Badge/Logo */}
 											<TableCell
-												className={classes.teamText}
 												style={{ fontSize: '1.45rem', border: 'none' }}
 												align="center">
 												<img
@@ -142,7 +141,7 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 								<Typography
 									variant="body"
 									className={classes.item}
-									sx={{ justifyContent: 'end', alignItems: 'center' }}>
+									sx={{ alignItems: 'center', width: 'auto', zIndex: 1 }}>
 									{arr.fixture.date.slice(11, 16)} {arr.fixture.status.short}
 								</Typography>
 							</Paper>

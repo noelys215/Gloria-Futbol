@@ -33,9 +33,15 @@ const LeftBar = ({ league }) => {
 								<TableCell align="center">#</TableCell>
 								<TableCell align="center">{''}</TableCell>
 								<TableCell align="center">{''}</TableCell>
-								<TableCell align="center">PTS</TableCell>
-								<TableCell align="center">P</TableCell>
-								<TableCell align="center">GD</TableCell>
+								<TableCell className={classes.labelText} align="center">
+									PTS
+								</TableCell>
+								<TableCell className={classes.labelText} align="center">
+									P
+								</TableCell>
+								<TableCell className={classes.labelText} align="center">
+									GD
+								</TableCell>
 							</TableRow>
 						</TableHead>
 						{/* Standings */}

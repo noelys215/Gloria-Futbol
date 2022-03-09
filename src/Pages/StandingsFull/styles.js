@@ -21,8 +21,15 @@ const useStyles = makeStyles((theme) => ({
 			fontSize: '1rem',
 		},
 		[theme.breakpoints.down(330)]: {
-			padding: 0,
+			padding: theme.spacing(0.5),
 			overflowWrap: 'break-word',
+		},
+	},
+	labelText: {
+		paddingLeft: 0,
+		width: 'auto',
+		[theme.breakpoints.down(330)]: {
+			padding: 0,
 		},
 	},
 }));
