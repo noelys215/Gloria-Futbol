@@ -2,32 +2,38 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	container: {
-		height: '150px',
-		width: '100%',
-		overflow: 'hidden',
+		width: 'auto',
+		[theme.breakpoints.down('sm')]: {
+			width: '98vw',
+			margin: 'auto',
+			marginBottom: theme.spacing(1),
+		},
 		[theme.breakpoints.down('xs')]: {
 			width: '98vw',
 			margin: 'auto',
+			marginBottom: theme.spacing(1),
 		},
 		[theme.breakpoints.between(1200, 1400)]: {
-			width: '90%',
+			margin: 'auto',
+			marginBottom: theme.spacing(1),
+			width: '98%',
 		},
 	},
-	paper: {
-		width: '100%',
-		[theme.breakpoints.down('sm')]: {},
-	},
+
 	item: {
 		display: 'flex',
+		justifyContent: 'space-between',
 		fontFamily: 'sans-serif',
 		fontWeight: 300,
 		fontSize: '1.60rem',
 		textAlign: 'center',
-		paddingRight: theme.spacing(2),
-		cursor: 'pointer',
+		paddingLeft: theme.spacing(3),
+		paddingRight: theme.spacing(3),
 		[theme.breakpoints.down('sm')]: {
-			paddingRight: theme.spacing(0),
-			fontSize: '1.2rem',
+			fontSize: '1.3rem',
+		},
+		[theme.breakpoints.down('xs')]: {
+			padding: 0,
 		},
 	},
 	teamText: {

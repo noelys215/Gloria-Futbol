@@ -3,8 +3,9 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
 	container: {
 		width: 'auto',
+		borderBox: 1,
 		[theme.breakpoints.down('sm')]: {
-			// width: '98vw',
+			width: '98vw',
 			margin: 'auto',
 			marginBottom: theme.spacing(1),
 		},
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	item: {
 		display: 'flex',
-		fontFamily: 'sans-serif',
+		justifyContent: 'space-between',
 		fontWeight: 300,
 		fontSize: '1.60rem',
 		textAlign: 'center',
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 			padding: 0,
 		},
 	},
-	scoreName: {
+	teamText: {
 		fontSize: '1.45rem',
 		paddingLeft: 0,
 		textAlign: 'left',

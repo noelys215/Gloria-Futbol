@@ -57,11 +57,11 @@ const Fixtures = ({ fixtureId }) => {
 							/>
 						</TableCell>
 						{/* Score */}
-						<TableCell className={classes.scoreName} align="left">
+						<TableCell className={classes.teamText} align="left">
 							{fixture[0]?.goals?.home}
 						</TableCell>
 						{/* Team */}
-						<TableCell className={classes.scoreName} align="center">
+						<TableCell className={classes.teamText} align="center">
 							{fixture[0]?.teams?.home?.name}
 						</TableCell>
 					</TableRow>
@@ -77,11 +77,11 @@ const Fixtures = ({ fixtureId }) => {
 							/>
 						</TableCell>
 						{/* Away Score */}
-						<TableCell className={classes.scoreName} align="left">
+						<TableCell className={classes.teamText} align="left">
 							{fixture[0]?.goals?.away}
 						</TableCell>
 						{/* Away Team */}
-						<TableCell className={classes.scoreName} align="center">
+						<TableCell className={classes.teamText} align="center">
 							{fixture[0].teams?.away?.name}
 						</TableCell>
 					</TableRow>
@@ -90,7 +90,7 @@ const Fixtures = ({ fixtureId }) => {
 			<Typography
 				variant="body"
 				className={classes.item}
-				sx={{ justifyContent: 'end', alignItems: 'center' }}>
+				sx={{ alignItems: 'center', width: 'auto', zIndex: 1 }}>
 				{fixture[0].fixture.date.slice(11, 16)} {fixture[0].fixture.status.short}
 			</Typography>
 		</Paper>
