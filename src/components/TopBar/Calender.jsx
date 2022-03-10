@@ -31,6 +31,9 @@ const Calender = ({ selectedDate, handleDateChange }) => {
 			) : (
 				<LocalizationProvider dateAdapter={DateAdapter}>
 					<MobileDatePicker
+						minDate={parseISO('2021-08-13')}
+						maxDate={parseISO('2022-05-23')}
+						showToolbar={false}
 						inputFormat="MM/dd/yyyy"
 						value={parseISO(selectedDate)}
 						onChange={handleDateChange}
