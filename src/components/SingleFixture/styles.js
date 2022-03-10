@@ -2,16 +2,15 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	container: {
-		width: 'auto',
 		borderBox: 1,
 		[theme.breakpoints.down('sm')]: {
-			width: '98vw',
-			margin: 'auto',
+			width: 'auto',
+			// margin: 'auto',
 			marginBottom: theme.spacing(1),
 		},
 		[theme.breakpoints.down('xs')]: {
-			width: '98vw',
-			margin: 'auto',
+			width: 'auto !important',
+			// margin: 'auto',
 			marginBottom: theme.spacing(1),
 		},
 		[theme.breakpoints.between(1200, 1400)]: {
@@ -21,16 +20,14 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	item: {
+		width: 'auto',
 		display: 'flex',
-		justifyContent: 'space-between',
-		fontWeight: 300,
 		fontSize: '1.60rem',
 		textAlign: 'center',
 		paddingLeft: theme.spacing(3),
 		paddingRight: theme.spacing(3),
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.3rem',
-			// padding: 0,
 		},
 		[theme.breakpoints.down('xs')]: {
 			padding: 0,

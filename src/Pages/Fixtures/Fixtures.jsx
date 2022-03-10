@@ -41,9 +41,9 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 		<AnimatePresence>
 			{fixture.map((arr, i) => (
 				<Box
-					className={classes.container}
-					sx={{ margin: 'auto' }}
-					spacing={0}
+					// className={classes.container}
+					// sx={{ margin: 'auto' }}
+					// spacing={0}
 					key={fixture[i]?.fixture?.id}
 					id={fixture[i]?.fixture?.id}>
 					<motion.div {...boxAnimation} transition={{ delay: i * 0.2 }}>
@@ -60,10 +60,13 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 									setFixtureId(fixture[i]?.fixture?.id);
 									localStorage.setItem('fixture', JSON.stringify(fixtureId));
 								}}>
-								<Table>
+								<Table sx={{ width: '80%', margin: 'auto' }}>
 									<TableBody
-										className={classes.item}
-										sx={{ display: 'flex', flexDirection: 'column' }}>
+										sx={{
+											display: 'flex',
+											flexDirection: 'column',
+											width: 'auto',
+										}}>
 										{/* Home */}
 										<TableRow sx={{ height: '50px' }}>
 											{/* Badge/Logo */}
@@ -141,7 +144,7 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 								<Typography
 									variant="body"
 									className={classes.item}
-									sx={{ alignItems: 'center', width: 'auto', zIndex: 1 }}>
+									sx={{ alignItems: 'center', width: 'auto' }}>
 									{arr.fixture.date.slice(11, 16)} {arr.fixture.status.short}
 								</Typography>
 							</Paper>

@@ -57,7 +57,13 @@ const App = () => {
 							''
 						)}
 					</Grid>
-					<Grid item sm={12} md={12} lg={6} order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2 }}>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={12}
+						lg={6}
+						order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2 }}>
 						{/*  */}
 						<AnimatePresence exitBeforeEnter>
 							<Routes>
@@ -128,7 +134,13 @@ const App = () => {
 						</AnimatePresence>
 						{/*  */}
 					</Grid>
-					<Grid item sm={12} md={6} lg={3} order={{ xs: 3, sm: 1, md: 2, lg: 3, xl: 3 }}>
+					<Grid
+						item
+						xs={12}
+						sm={12}
+						md={6}
+						lg={3}
+						order={{ xs: 3, sm: 1, md: 2, lg: 3, xl: 3 }}>
 						{window.innerWidth > 1199 ? (
 							window.location.pathname === '/playerstats' ? null : (
 								<COMP.RightBar league={league} selectedDate={selectedDate} />

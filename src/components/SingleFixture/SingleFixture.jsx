@@ -5,6 +5,7 @@ import {
 	Table,
 	TableBody,
 	TableCell,
+	TableContainer,
 	TableRow,
 	Typography,
 } from '@mui/material';
@@ -34,18 +35,12 @@ const Fixtures = ({ fixtureId }) => {
 	const fixture = data?.response;
 
 	return (
-		<Paper
+		<TableContainer
 			className={classes.container}
-			elevation={2}
-			sx={{
-				display: 'flex',
-				borderRadius: 2,
-				mb: 1,
-			}}>
-			<Table>
-				<TableBody
-					className={classes.item}
-					sx={{ display: 'flex', flexDirection: 'column' }}>
+			component={Paper}
+			sx={{ display: 'flex', width: '100%', mb: 1, borderRadius: 1 }}>
+			<Table sx={{ width: '80%', margin: 'auto' }}>
+				<TableBody sx={{ display: 'flex', flexDirection: 'column', width: '50%', mr: 0 }}>
 					{/* Home */}
 					<TableRow sx={{ height: '50px' }}>
 						{/* Badge/Logo */}
@@ -90,10 +85,10 @@ const Fixtures = ({ fixtureId }) => {
 			<Typography
 				variant="body"
 				className={classes.item}
-				sx={{ alignItems: 'center', width: 'auto', zIndex: 1 }}>
+				sx={{ alignItems: 'center', width: 'auto' }}>
 				{fixture[0].fixture.date.slice(11, 16)} {fixture[0].fixture.status.short}
 			</Typography>
-		</Paper>
+		</TableContainer>
 	);
 };
 

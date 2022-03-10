@@ -4,12 +4,12 @@ const useStyles = makeStyles((theme) => ({
 	container: {
 		width: 'auto',
 		[theme.breakpoints.down('sm')]: {
-			width: '98vw',
+			width: 'auto',
 			margin: 'auto',
 			marginBottom: theme.spacing(1),
 		},
 		[theme.breakpoints.down('xs')]: {
-			width: '98vw',
+			width: 'auto',
 			margin: 'auto',
 			marginBottom: theme.spacing(1),
 		},
@@ -21,10 +21,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	item: {
+		width: 'auto',
 		display: 'flex',
-		justifyContent: 'space-between',
-		fontFamily: 'sans-serif',
-		fontWeight: 300,
 		fontSize: '1.60rem',
 		textAlign: 'center',
 		paddingLeft: theme.spacing(3),
