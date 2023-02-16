@@ -20,6 +20,9 @@ const Fixtures = ({ league, selectedDate, fixtureId, setFixtureId }) => {
 	const classes = useStyles();
 	const fixture = data?.response;
 
+	console.log(selectedDate);
+	console.log(data);
+
 	if (isFetching) {
 		return (
 			<Box
