@@ -15,7 +15,7 @@ const Calender = ({ selectedDate, handleDateChange }) => {
 			{useMediaQuery(theme.breakpoints.up('sm')) ? (
 				<LocalizationProvider dateAdapter={DateAdapter}>
 					<DesktopDatePicker
-						minDate={parseISO(`${new Date().getFullYear() - 2}-08-13`)}
+						// minDate={parseISO(`${new Date().getFullYear() - 2}-08-13`)}
 						// minDate={parseISO('2021-08-13')}
 						// maxDate={parseISO(`${new Date().getFullYear() - 1}-08-13`)}
 						inputFormat="MM/dd/yyyy"
@@ -32,8 +32,8 @@ const Calender = ({ selectedDate, handleDateChange }) => {
 			) : (
 				<LocalizationProvider dateAdapter={DateAdapter}>
 					<MobileDatePicker
-						minDate={parseISO(`${new Date().getFullYear() - 2}-08-13`)}
-						maxDate={parseISO(`${new Date().getFullYear() - 1}-08-13`)}
+						// minDate={parseISO(`${new Date().getFullYear() - 2}-08-13`)}
+						// maxDate={parseISO(`${new Date().getFullYear() - 1}-08-13`)}
 						showToolbar={false}
 						inputFormat="MM/dd/yyyy"
 						value={parseISO(selectedDate)}
